@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Banned WhatsApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5;
+            color: #41525d;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #3b4a54;
+        }
+        .description {
+            margin-bottom: 30px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .country {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #e9edef;
+        }
+        .country-flag {
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        .phone-input {
+            padding: 15px 0;
+        }
+        .phone-prefix {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #f0f2f5;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .phone-number {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e9edef;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .continue-btn {
+            background-color: #00a884;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        .result-screen {
+            display: none;
+            text-align: center;
+        }
+        .phone-number-display {
+            font-size: 18px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .band-info {
+            text-align: left;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+        .footer {
+            font-size: 12px;
+            margin-top: 30px;
+            color: #8696a0;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .cancel-btn, .support-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .cancel-btn {
+            background-color: #f0f2f5;
+            border: 1px solid #e9edef;
+            color: #3b4a54;
+        }
+        .support-btn {
+            background-color: #00a884;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="verification-screen">
+        <h1>Masukkan nomor telepon Anda</h1>
+        <div class="description">
+            WhatsApp perlu memverifikasi nomor telepon Anda.<br>
+            Biaya operator mungkin berlaku. <strong>Berapa nomor telepon saya?</strong>
+        </div>
+        
+        <hr>
+        
+        <div class="country">
+            <div class="country-flag">Indonesia</div>
+        </div>
+        
+        <div class="phone-input">
+            <div class="phone-prefix">+ 62</div>
+            <input type="tel" class="phone-number" placeholder="Nomor telepon">
+        </div>
+        
+        <button class="continue-btn" onclick="showResult()">Lanjut</button>
+    </div>
+    
+    <div class="container result-screen" id="result-screen">
+        <div class="phone-number-display">+62 812-4622-4694</div>
+        <div style="font-weight: bold; margin-bottom: 20px;">DONE BAND BY KING FAKZ 🌟🌟</div>
+        
+        <div class="band-info">
+            - Sampah Rakyat<br>
+            - Beban WhatsApp<br>
+            - EztBand<br>
+            - No Lu Ezz Band
+        </div>
+        
+        <div class="footer">
+            © By : @WilxStore
+        </div>
+        
+        <div class="button-group">
+            <button class="cancel-btn" onclick="goBack()">BATAL</button>
+            <button class="support-btn">DUKUNG</button>
+        </div>
+    </div>
+
+    <script>
+        function showResult() {
+            document.getElementById('verification-screen').style.display = 'none';
+            document.getElementById('result-screen').style.display = 'block';
+            
+            // Anda bisa mendapatkan nomor telepon dari input field jika diinginkan
+            // const phoneNumber = document.querySelector('.phone-number').value;
+            // document.querySelector('.phone-number-display').textContent = '+62 ' + phoneNumber;
+        }
+        
+        function goBack() {
+            document.getElementById('verification-screen').style.display = 'block';
+            document.getElementById('result-screen').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
